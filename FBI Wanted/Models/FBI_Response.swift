@@ -22,7 +22,7 @@ struct FBIImage: Codable
 struct FBIItem: Codable
 {
     let title: String?
-    let details: String?
+    let caution: String?
     let age_min: Int?
     let age_max: Int?
     let sex: String?
@@ -32,9 +32,9 @@ struct FBIItem: Codable
     let images: [FBIImage]
     
     var cleanDetails: String {
-        guard let details = details else {return ""}
+        guard let caution = caution else {return "No Information."}
         
-        return details.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
+        return caution.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
     }
     
     var getAge: String
@@ -80,7 +80,8 @@ struct FBIItem: Codable
     {
         guard let height = height_min else {return "UNKNOWN"}
         
-        return ("\(String(height)[String(height).startIndex])'\(String(height)[String(height).endIndex])\"")
+        //return String(height)
+        return ("\(String(height)[String(height).startIndex])'\(String(height)[String(height).index(before: String(height).endIndex)])\"")
     }
 
     var getNationality: String
