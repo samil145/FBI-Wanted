@@ -27,6 +27,12 @@
 <img src= "https://github.com/samil145/FBI-Wanted/blob/main/Images/Search_record.gif?raw=true" height="600" width="300" >
 </p>
 
+- If there is no result of search, **"No Result"** text can be seen on screen.
+
+<p align="center">
+<img src= "https://github.com/samil145/FBI-Wanted/blob/main/Images/No_Result.png?raw=true" height="600">
+</p>
+
 ## Technical Background
 - **FBI Wanted App** is made with **"UIKit"** framework.
 - **"FBI API"** is used for API calls.
